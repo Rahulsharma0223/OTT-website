@@ -1,0 +1,263 @@
+/* Global Styles */
+body {
+    background-color: #1d1d1d;
+    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    width: 100px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Content Section Styles */
+.content-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.section-title {
+    width: 100%;
+    height: 650px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    background-color: #14ff00;
+    padding: 0;
+    border-radius: 0px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    color: #14ff00;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.headings{
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.8em;
+    background-color: #17ca53c9;
+    padding: 0;
+    border-radius: 10px;
+    box-sizing: border-box;
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+/* Card Styles */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-color: transparent;
+    
+    
+}
+
+.card {
+    background-color: #2c2c2c;
+    margin: 10px;
+    padding: 15px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-sizing: border-box;
+    position: relative;
+    overflow: hidden;
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    z-index: 0; /* Changed to place it behind the content */
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00f5);
+    background-size: 400%;
+    border-radius: 10px;
+    padding: 2px;
+    -webkit-mask: 
+      linear-gradient(#fff 0 0) content-box, 
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    animation: shine 5s linear infinite;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    max-height: 170px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.card p {
+    margin: 10px 0;
+}
+
+.card .title {
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+.card .description {
+    color: #bdbdbd;
+    font-size: 0.9em;
+}
+
+.card .price {
+    color: #14ff00;
+    font-size: 1.2em;
+}
+
+.card button {
+    background-color: #6200ea;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    width: 100%;
+    z-index: 1; /* Ensures button stays clickable */
+    position: relative;
+}
+
+.card button:hover {
+    background-color: #14ff00;
+}
+
+/* Payment Section Styles */
+.payment-section {
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+    text-align: center;
+    background-color: #333;
+    margin-top: 20px;
+    box-sizing: border-box;
+}
+
+.payment-section h2 {
+    color: #fffcfc;
+    margin-bottom: 20px;
+}
+
+.qr-code {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.payment-section ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+.payment-section li {
+    background-color: #444;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.payment-section li:hover {
+    background-color: #555;
+}
+
+.contact-button {
+    background-color: #14ff00;
+    color: #1d1d1d;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    width: 100%;
+}
+
+.contact-button:hover {
+    background-color: #12d600;
+}
+
+
+/* Responsive Design */
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+    .card {
+        width: 30%;
+    }
+
+    .payment-section ul {
+        max-width: 500px;
+    }
+    .section-title{
+        max-width: 100%;
+        height: 650px;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991px) {
+    .card {
+        width: 45%;
+    }
+
+    .payment-section ul {
+        max-width: 400px;
+    }
+    .section-title{
+        width: 100%;
+        height: 500px;
+    }
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .content-section {
+        padding: 20px;
+    }
+
+    .payment-section ul {
+        max-width: 100%;
+    }
+    .section-title{
+        width: 100%;
+        height: 200px;
+    }
+}
+
