@@ -1,19 +1,15 @@
 /* Global Styles */
-body {
-    background-color: #1d1d1d;
-    color: white;
-    font-family: Arial, sans-serif;
+html, body {
     margin: 0;
     padding: 0;
+    height: 100%; /* Ensure the body takes full height */
+    font-family: Arial, sans-serif;
+    color: #ffffff;
 }
 
 header {
     text-align: center;
     padding: 20px 0;
-}
-
-.logo {
-    width: 100px;
 }
 
 main {
@@ -22,6 +18,85 @@ main {
     flex-direction: column;
     align-items: center;
 }
+
+/*homepage*/
+/*homepage*/
+.container {
+    text-align: left;
+    width: 100%;
+    height: 100vh; /* Cover the full screen height */
+    padding: 50px;
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #003f8a;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align content at the top */
+    padding-top: 5px; /* Adjust this value to control the upward shift */
+}
+
+
+header h1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #ffffff;
+    margin-bottom: 50px;
+}
+
+/* Other styles remain the same */
+
+
+.asterisk {
+    color: #ff4500;
+    font-size: 24px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #000000;
+}
+
+.text-content {
+    max-width: 600px;
+}
+
+h2 {
+    font-size: 48px;
+    color: #ff6600;
+    margin-bottom: 20px;
+}
+
+.highlight {
+    color: #ff6600;
+    font-weight: bold;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
 
 /* Content Section Styles */
 .content-section {
@@ -224,6 +299,7 @@ main {
         max-width: 100%;
         height: 650px;
     }
+    
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -239,6 +315,7 @@ main {
         width: 100%;
         height: 500px;
     }
+    
 }
 
 /* Small devices (phones, less than 768px) */
@@ -259,5 +336,5 @@ main {
         width: 100%;
         height: 200px;
     }
+    
 }
-
