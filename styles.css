@@ -18,6 +18,53 @@ main {
     align-items: center;
 }
 
+/* Navbar styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #144b8f;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+}
+
+.navbar .brand-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar .navbar-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.navbar .navbar-links ul li {
+    padding: 0 20px;
+}
+
+.navbar .navbar-links ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+.navbar .toggle-button {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.navbar .toggle-button .bar {
+    height: 3px;
+    width: 25px;
+    background-color: rgb(0, 255, 179);
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+
 /*homepage*/
 .container {
     width: 100%;
@@ -351,6 +398,30 @@ p {
 
     p {
         font-size: 18px;
+    }
+
+    /*nav-bar*/
+    .navbar .navbar-links {
+        display: none;
+        width: 100%;
+    }
+
+    .navbar .navbar-links ul {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar .navbar-links ul li {
+        text-align: center;
+        padding: 15px 0;
+    }
+
+    .navbar .toggle-button {
+        display: flex;
+    }
+
+    .navbar.active .navbar-links {
+        display: flex;
     }
     
 }
