@@ -23,7 +23,7 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #333;
+    background-color: #225da5;
     padding: 10px 20px;
     color: white;
     position: relative;
@@ -76,12 +76,13 @@ main {
     flex-direction: column;
     justify-content: flex-start;
     background-color: #003f8a; /* Match the background color */
+    color: whitesmoke;
 }
 
 header h1 {
     font-size: 20px;
     font-weight: bold;
-    color: #ffffff;
+    color: whitesmoke;
     margin-bottom: 50px;
 }
 
@@ -97,6 +98,10 @@ header h1 {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap; /* Allow wrapping for smaller screens */
+}
+
+.content p{
+    color: white;
 }
 
 .logo {
@@ -178,7 +183,7 @@ p {
     box-sizing: border-box;
     background-size: cover;
     background-position: center;
-    color: #fff;
+    color: whitesmoke;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -235,6 +240,7 @@ p {
 
 .card p {
     margin: 10px 0;
+    color: whitesmoke;
 }
 
 .card .title {
@@ -290,20 +296,13 @@ p {
     margin-bottom: 20px;
 }
 
-.payment-section ul {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    max-width: 300px;
-    margin: 0 auto;
-}
-
 .payment-section li {
     background-color: #444;
     padding: 10px;
     margin-bottom: 10px;
     border-radius: 5px;
     transition: background-color 0.3s ease;
+    color: rgb(218, 215, 215);
 }
 
 .payment-section li:hover {
@@ -311,7 +310,7 @@ p {
 }
 
 .contact-button {
-    background-color: #14ff00;
+    background-color: #62f155;
     color: #1d1d1d;
     border: none;
     padding: 10px 20px;
