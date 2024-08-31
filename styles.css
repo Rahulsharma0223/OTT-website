@@ -70,8 +70,8 @@ main {
 /*homepage*/
 .container {
     width: 100%;
-    padding: 50px;
-    min-height: 100vh;
+    height: 100%;
+    padding: 0px 50px 0px 50px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -83,7 +83,7 @@ header h1 {
     font-size: 20px;
     font-weight: bold;
     color: whitesmoke;
-    margin-bottom: 50px;
+    margin-bottom: 0px;
 }
 
 .asterisk {
@@ -213,14 +213,14 @@ p {
 .card::before {
     content: '';
     position: absolute;
-    top: -2px;
-    left: -2px;
-    right: -2px;
-    bottom: -2px;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
     z-index: 0; /* Changed to place it behind the content */
     background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00f5);
     background-size: 400%;
-    border-radius: 10px;
+    border-radius:10px;
     padding: 2px;
     -webkit-mask: 
       linear-gradient(#fff 0 0) content-box, 
@@ -390,7 +390,13 @@ p {
     .text-content {
         width: 100%;
         text-align: center; /* Center text content */
-        padding: 0 10px; /* Add padding to avoid text hitting the edges */
+        
+        
+    }
+    .text-content p{
+        margin-left: 24px;
+        margin-right: 24px;
+      
     }
 
     h2 {
