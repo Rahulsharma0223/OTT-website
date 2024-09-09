@@ -9,6 +9,7 @@ html, body {
 header {
     text-align: center;
     padding: 20px 0;
+    margin-top: 60px;
 }
 
 main {
@@ -23,16 +24,20 @@ main {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #3573c0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    backdrop-filter: blur(3px);
     padding: 10px 20px;
     color: white;
-    position: relative;
-    z-index: 1000;
+    position: fixed; 
+    top: 0; /* Position it at the very top of the viewport */
+    width: 100%; /* Makes sure the navbar spans the entire width */
+    z-index: 1000; /* Ensures it's on top of other elements */
 }
 
 .brand-title {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #00eeff;
 }
 
 .navbar-links ul {
@@ -46,14 +51,27 @@ main {
     padding: 0 20px;
 }
 
+.navbar-links ul li:last-child {
+    padding-right: 40px; 
+}
+
 .navbar-links ul li a {
     text-decoration: none;
     color: white;
     font-size: 1rem;
+    transition: color 0.3s ease, background-color 0.3s ease; /* Smooth hover transition */
 }
 
+.navbar-links ul li a:hover {
+    color: #00eeff; /* Hover effect: change text color */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight background change on hover */
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+/* Mobile hamburger menu button */
 .toggle-button {
-    display: none;
+    display:none;
     flex-direction: column;
     cursor: pointer;
 }
@@ -66,17 +84,17 @@ main {
     border-radius: 2px;
 }
 
-
 /*homepage*/
 .container {
     width: 100%;
-    height: 100%;
-    padding: 0px 50px 0px 50px;
+    min-height: 100vh; 
+    padding: 0 50px; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    background-color: #003f8a; /* Match the background color */
+    background-color: #003f8a;
     color: whitesmoke;
+    overflow-x:hidden; /* Prevent content from overflowing horizontally */
 }
 
 header h1 {
@@ -537,7 +555,8 @@ footer p{
     .navbar.active .navbar-links {
         display: flex;
         flex-direction: column;
-        background-color: #333;
+        background-color: rgba(0, 0, 0, 0.5); 
+        backdrop-filter: blur(3px); 
         position: absolute;
         top: 60px; /* Adjust depending on your navbar height */
         left: 0;
