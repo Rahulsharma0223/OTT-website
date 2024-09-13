@@ -72,8 +72,11 @@ main {
 /* Mobile hamburger menu button */
 .toggle-button {
     display:none;
+    position: relative;
     flex-direction: column;
     cursor: pointer;
+    margin-left: auto;
+    padding-right: 30px;
 }
 
 .toggle-button .bar {
@@ -540,12 +543,20 @@ footer p{
     .navbar-links ul {
         flex-direction: column;
         align-items: center;
+        display: block;
+        padding: 0px;
+        margin: 0px;
     }
 
     .navbar-links ul li {
         padding: 10px 0;
         width: 100%;
         text-align: center;
+        margin: 0px;
+    }
+    .navbar-links ul li a:hover {
+        background-color: rgba(255, 255, 255, 0.1); /* Hover effect */
+        color: #00eeff; /* Change color on hover */
     }
 
     .toggle-button {
@@ -555,12 +566,14 @@ footer p{
     .navbar.active .navbar-links {
         display: flex;
         flex-direction: column;
-        background-color: rgba(0, 0, 0, 0.5); 
-        backdrop-filter: blur(3px); 
+        background: rgba(0, 0, 0, 0.6); 
+        backdrop-filter: blur(6px); 
         position: absolute;
-        top: 60px; /* Adjust depending on your navbar height */
-        left: 0;
-        width: 100%;
+        top: 52px; /* Positioned just below the hamburger icon */
+        right: 0; /* Aligned to the right */
+        width: 45%; /* Adjusted width to fit well */
+        padding: 15px 10px; /* More padding for a neat appearance */
+        transition: all 0.3s ease-in-out; /* Smooth transition for opening/closing */
     }
 
     /* contact us */
